@@ -10,7 +10,7 @@
 4. 也就是在相同的托管对象 上下文里,表示相同数据的对象的指针地址也是相等的。
 
 5. 获取请求的includesPendingChanges属性默认值是true,在返回获取请求的结 果之前,上下文会将那些正在等待进行的更改考虑进来,并相应地更新原来的结果
-   ![流程](fetch.png)在这个过程中,最重要的部分是 Core Data 的惰值化和唯一性机制。惰值允许你无需在内存中 实体化所有对象就能处理大数据集;唯一性可以确保对于相同的数据,你总是得到相同的对象, 并且有且仅有一个对象副本
+   ![流程](https://raw.githubusercontent.com/yinhaofrancis/notes/master/fetch.png)在这个过程中,最重要的部分是 Core Data 的惰值化和唯一性机制。惰值允许你无需在内存中 实体化所有对象就能处理大数据集;唯一性可以确保对于相同的数据,你总是得到相同的对象, 并且有且仅有一个对象副本
 
 ## 对象惰值
 1. `NSFetchRequest` 设置 `returnsObjectsAsFaults = true` 返回惰值 `false` 强制填充为惰值
