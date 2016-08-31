@@ -24,6 +24,7 @@
 ​	算法描述，从最后一个节点的parent开始倒序遍历到根节点确保每个节点和他的子节点保持堆的性质
 
 ````swift
+    private func heapfy(end:Int, filter:(a:Element,b:Element)->Bool){
         if let p = parent(end){
             for i in 0 ... p{
                 let current = p - i
@@ -41,6 +42,7 @@
                 }
             }
         }
+    }
 ````
 
 ## 堆排序
