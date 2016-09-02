@@ -89,3 +89,17 @@ UIGraphicsEndImageContext()
   实现的是矩形 - 圆形 实现差集的重点是 `bezierPathByReversingPath()`目的是当图形的路径有交集时相交的部分会被截去
 
    ![1-4](1-4.png)
+
+## CGContext 图形绘制上下文
+
+记录了绘制图片的尺寸，像素格式等信息
+
+````swift
+let width = CGBitmapContextGetWidth(context) //图片宽度
+let height = CGBitmapContextGetHeight(context) //图片高度
+
+let bitmapInfo = CGBitmapContextGetBitmapInfo(context) 
+let alphaInfo =  CGBitmapContextGetAlphaInfo(context) // 像素ALpha 的一些信息 eg RGB ARGB RGBA 一般是 RGBA
+let c = CGBitmapContextGetBitsPerPixel(context) //像素字节数
+````
+
